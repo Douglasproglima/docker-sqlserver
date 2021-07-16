@@ -1,0 +1,20 @@
+version: '3'
+services:
+  db_sql:
+    container_name: container-sql-full
+    build:
+      context: .
+      dockerfile: Dockerfile
+    hostname:
+      mssql-full
+    domainname:
+      douglasproglima
+    environment:
+      MSSQL_SA_PASSWORD: "PaSSw0rd"
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: "Developer"
+    expose:
+      - 14333
+    ports:
+      - "14333:1433"
+    cpu_count: 4

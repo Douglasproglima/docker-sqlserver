@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-20.04
+FROM mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-16.04
 EXPOSE 1433
 
 LABEL "MAINTAINER" "Douglas Lima <douglasproglima@gmail.com>"
