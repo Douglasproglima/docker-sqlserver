@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+  db_sql:
+    container_name: container_sql
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    restart: always
+    tty: true
+    hostname:
+      mssql-demo1
+    domainname:
+      douglasproglima
+    environment:
+      MSSQL_SA_PASSWORD: "PaSSw0rd"
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: "Developer"
+      MSSQL_AGENT_ENABLED: "true"
+    volumes:
+      - ${SHARED_FOLDER}:/var/opt/mssql/shared_folder
+    expose:
+      - 14333
+    ports:
+      - "14333:1433"
+    cpu_count: 4
