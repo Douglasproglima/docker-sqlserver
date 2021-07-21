@@ -7,7 +7,7 @@ services:
     restart: always
     tty: true
     hostname:
-      mssql-demo1
+      mssql-ubuntu
     domainname:
       douglasproglima
     environment:

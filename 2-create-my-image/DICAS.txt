@@ -1,0 +1,5 @@
+após criar o container, acessar o mesmo:
+docker -it container-sql bash
+
+rodar o comando no terminal, para restaurar o bck do BD:
+/opt/mssql-tools/bin/sqlcmd -S 127.0.0.1 -U sa -P PaSSw0rd -d master -i /usr/config/setup.restore.sql

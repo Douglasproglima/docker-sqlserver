@@ -1,12 +1,12 @@
 version: '3'
 services:
   db_sql:
-    container_name: container-sql-demo4
+    container_name: container-sql
     build:
       context: .
       dockerfile: Dockerfile
     hostname:
-      mssql-demo4
+      mssql-ubuntu
     domainname:
       douglasproglima
     environment:
